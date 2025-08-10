@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EGD Lab Exam</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-animation"></div>
+
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <img id="logo" src="Jamia-Hamdard-University_Logo.png" alt="Jamia Hamdard Logo" class="logo">
+        <div class="jamia-info">
+          <h1>Jamia Hamdard</h1>
+          <p>Department of Computer Science and Engineering<br>
+          School of Engineering Sciences and Technology</p>
+          <p class="exam-title"><strong>Even Semester Exam 2025</strong></p>
+          <h2>Engineering Graphics and Design Lab</h2>
+        </div>
+      </div>
+    </header>
+
+    <div class="card" id="studentForm">
+      <h2>Enter Student Details</h2>
+      <form>
+	  <!-- Inside the form -->
+<div class="form-group">
+  <label for="email">Email (for question copy):</label>
+  <input type="email" id="email" required>
+</div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rollNumber">Roll Number:</label>
+          <input type="text" id="rollNumber" required>
+        </div>
+
+        <div class="form-group">
+          <label for="class">Class:</label>
+          <input type="text" id="class" required>
+        </div>
+
+        <button type="button" class="btn-primary" onclick="generateQuestions()">Generate Questions</button>
+      </form>
+    </div>
+
+    <div class="card" id="questionsSection" style="display:none;">
+      <div class="exam-instructions">
+        <h3>Important Instructions:</h3>
+        <ol>
+          <li><strong>Q1 is compulsory</strong> (Lettering question)</li>
+          <li>Attempt <strong>any one</strong> from Q2 and Q3</li>
+          <li>Take screenshot of this page for your reference</li>
+          <li>All constructions must be shown clearly</li>
+          <li>Label all dimensions properly</li>
+        </ol>
+      </div>
+
+      <div id="studentDetails" class="student-details"></div>
+      
+      <div id="questionList" class="question-list"></div>
+      
+      <button class="btn-secondary" onclick="restartExam()">Generate New Questions</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      <img src="drmsa.png" alt="Logo" class="footer-logo"/>
+    </p>
+    <p>Developed by <strong>Dr. MSA</strong> @ 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
